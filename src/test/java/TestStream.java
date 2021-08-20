@@ -141,4 +141,46 @@ public class TestStream {
                     '}';
         }
     }
+
+    /**
+     * 数组转集合
+     * @author jiangshengcheng
+     * @date 2021/8/18 11:43 上午
+     */
+    @Test
+    public void arrayToList(){
+        String [] str = {"1","2","3","4","5"};
+        List<String> strings = Arrays.asList(str);
+        System.out.println(strings);
+    }
+
+    @Test
+    public void listToArray(){
+        ArrayList<String> strings = new ArrayList<>(5);
+        strings.add("1");
+        strings.add("2");
+        strings.add("3");
+        strings.add("4");
+        strings.add("5");
+
+        String[] strings1 = strings.toArray(new String[strings.size()]);
+        System.out.println(strings1);
+
+
+    }
+
+    @Test
+    public void objectsEquals(){
+        Objects.equals(null,null);
+        new HashMap<>();
+    }
+
+    @Test
+    public void maxString(){
+        String a = "";
+        for(int i = 0;i < Integer.MAX_VALUE; i++){
+            a+="s";
+        }
+        System.out.println(a);
+    }
 }

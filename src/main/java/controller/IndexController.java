@@ -28,6 +28,7 @@ public class IndexController {
     public @ResponseBody String index(){
         return "world";
     }
+
     @GetMapping("user")
     public @ResponseBody CommonResult<List<String>> listUserId(){
         return webTemplate.process(new BizCallback<List<String>>() {
